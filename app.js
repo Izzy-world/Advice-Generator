@@ -6,8 +6,7 @@ let btn = document.getElementById("adviceBtn");
 
 async function getAdvice() {
     try {
-        let req = await fetch(`https://api.adviceslip.com/advice?timestamp=${new 
-        Date().getTime()}`);
+        let req = await fetch(`https://api.adviceslip.com/advice?timestamp=${new Date().getTime()}`);
         let res = await req.json();
         
         adviceID.innerText = `${res.slip.id}`;
